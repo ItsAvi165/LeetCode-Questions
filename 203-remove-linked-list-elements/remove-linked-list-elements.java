@@ -29,9 +29,9 @@ class Solution {
         // }
         // return trav;
 
-        ListNode temp = new ListNode(0);
+        ListNode temp = new ListNode(0);// This is a dummy node created for easy traversal in just one loop
         ListNode curr = temp;
-        temp.next = head;
+        temp.next = head; // placing dummy node before head
         while(curr.next != null ){
             if(curr.next.val == val) curr.next = curr.next.next;
             else curr = curr.next;
