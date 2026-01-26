@@ -1,6 +1,6 @@
 class Solution {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
-        Arrays.sort(arr);
+        Arrays.sort(arr); //uses dual pivot quick sort O(nlogn)
         int n = arr.length;
         int minDiff = arr[n - 1] - arr[n - 2];
 
@@ -20,3 +20,6 @@ class Solution {
         return al;
     }
 }
+//TC - O(nlogn) + O(n) + O(n) = O(nlogn)
+//SC - O(1) if output space is ignored
+//else O(logn) + O(n) = O(n) [internal sorting recursive stack + output list]
