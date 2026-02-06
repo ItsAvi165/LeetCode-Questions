@@ -6,14 +6,15 @@ class Solution {
             if (s.charAt(i) == s.charAt(i - 1)) {
                 curr++;
             } else {
-                if (curr > ans) {
+                if (curr > ans) { //found new consecutive group
                     ans = curr;
-                    curr = 1;
                 }
-                curr = 1;
+                curr = 1; // not maximum group, so just reset the count
             }
         }
 
-        return curr > ans ? curr : ans;
+        return Math.max(ans, curr);
     }
 }
+//TC - O(N)
+//SC - O(1)
